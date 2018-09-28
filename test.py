@@ -6,5 +6,9 @@ from boggle import Boggle
 
 class FlaskTests(TestCase):
 
-    # TODO -- write tests for every view function / feature!
+    def test_home(self):
+        """Testing to see if card is rendered on gameboard"""
+        client = app.test_client()
+        result = client.get('/')
+        self.assertIn(b'<div class="card-body">', result.data)
 

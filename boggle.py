@@ -7,7 +7,7 @@ import string
 class Boggle():
 
     def __init__(self):
-
+        """Grab a dictionary of words and store to self.words"""
         self.words = self.read_dict("/usr/share/dict/words")
 
     def read_dict(self, dict_path):
